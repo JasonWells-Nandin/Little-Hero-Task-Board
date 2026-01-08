@@ -3,7 +3,7 @@
 This is a desktop task management application built with Python and Tkinter, designed for personal daily task management (to-do list), incorporating gamification elements. It helps you track tasks, earn coins, and improve productivity.
 The result is shown below:
 
-![image-20260108155621037]()
+![task.png](task.png)
 
 ## Features
 
@@ -84,3 +84,4 @@ The executable will be generated in the `dist` directory. ## Task System
 
 
 Free for personal use and can be freely modified; commercial use is prohibited.
+
