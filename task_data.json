@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "id": "task_1767858947.823408",
+      "name": "test task1",
+      "description": "test",
+      "level": "NORMAL",
+      "task_type": "ONCE",
+      "tags": [],
+      "created_at": "2026-01-08T15:55:47.823441",
+      "completed": false,
+      "completed_at": null,
+      "last_completed": null
+    }
+  ],
+  "total_coins": 0,
+  "coin_history": []
+}
