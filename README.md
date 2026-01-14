@@ -116,3 +116,4 @@ The executable will be generated in the `dist` directory.
 
 Free for personal use and can be freely modified; commercial use is prohibited.
 
+
