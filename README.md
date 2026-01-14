@@ -1,162 +1,118 @@
-# 🎮 游戏风格任务管理器
+# Task Adventure Manager
 
-一个具有游戏风格界面的任务管理应用，支持任务创建、完成、金币奖励系统，以及不同级别的任务和周期任务管理。
+  Have you played *The Legend of Zelda: Breath of the Wild*, *Tears of the Kingdom*, or *Stardew Valley*? This is a desktop task management application built with Python and Tkinter, designed for personal daily task management (to-do lists) and featuring gamified design. Complete tasks, earn coins, and improve your productivity.
+See the screenshots below:
 
-## ✨ 功能特性
+![task](task.png)
 
-### 核心功能
-- ✅ **任务管理**：创建、编辑、删除任务
-- 💰 **金币系统**：完成任务获得金币奖励
-- 📊 **任务级别**：简单、普通、困难、史诗四个级别
-- 🔄 **周期任务**：支持一次性任务、日常任务、每周任务
-- 📈 **统计面板**：显示总金币、任务数、完成数
-- 💾 **数据持久化**：自动保存任务和金币数据
+## Features
 
-### 任务级别与奖励
-- **简单** (Lv.1)：完成获得 10 金币
-- **普通** (Lv.2)：完成获得 25 金币
-- **困难** (Lv.3)：完成获得 50 金币
-- **史诗** (Lv.4)：完成获得 100 金币
+- **Task Management**: Create, edit, delete, and complete tasks
+- **Gamification**: Earn coins based on task difficulty levels
+- **Task Levels**: Simple, Normal, Hard, Epic (different coin rewards)
+- **Task Types**: One-time, daily, and weekly recurring tasks
+- **Filtering and Sorting**: Filter by level, type, and tags, and sort by various criteria
+- **Statistics Dashboard**: View total coins, number of tasks, and completion progress
+- **Weather Forecast**: Select location to view local weather with cartoon-style display
+- **Calendar View**: Daily tasks linked to calendar, switch between task and calendar views
+- **Auto/Manual Refresh**: Daily tasks can be refreshed automatically or manually after completion
+- **Bilingual Support**: Switch between Chinese and English globally
+- **Data Persistence**: All data is automatically saved to a JSON file
 
-### 任务类型
-- **一次性任务**：完成后不再出现
-- **日常任务**：每天可以完成一次
-- **每周任务**：每周可以完成一次
+## Installation
 
-## 🚀 快速开始
+### Requirements
 
-### 方式一：直接运行Python脚本
+- Python 3.7 or higher
+- tkinter (usually included with Python)
 
-1. **安装依赖**
+### Installing Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-2. **运行应用**
+## Usage
+
+### Running the Application
+
 ```bash
 python task_manager.py
 ```
 
-### 方式二：打包为exe文件
+### Building an Executable
 
-#### Windows系统
-1. **安装依赖**
-```bash
-pip install -r requirements.txt
-```
+To build a standalone executable:
 
-2. **运行打包脚本**
 ```bash
-# 方式1：使用批处理文件（推荐）
+# Option 1: Using the batch file (recommended)
 build.bat
 
-# 方式2：直接运行Python脚本
+# Option 2: Running the Python script directly
 python build_exe.py
 ```
 
-打包完成后，exe文件将位于 `dist` 目录中。
+The executable will be generated in the `dist` directory.
 
-#### 手动打包命令
-```bash
-pyinstaller --name=任务管理器 --onefile --windowed task_manager.py
+## Task System
+
+### Task Levels
+
+- **Simple** (Lv.1): Reward 10 gold coins
+- **Normal** (Lv.2): Reward 25 gold coins
+- **Hard** (Lv.3): Reward 50 gold coins
+- **Epic** (Lv.4): Reward 100 gold coins
+
+### Task Types
+
+- **One-time Task**: Completed once and marked as done
+- **Daily Task**: Can be completed once per day, automatically refreshes
+- **Weekly Task**: Can be completed once per week
+
+## Features Details
+
+### Weather Forecast
+
+- Click on the weather location label to change location
+- Weather data is fetched from wttr.in API
+- Location preference is saved and restored on next launch
+
+### Calendar View
+
+- Switch between task list view and calendar view
+- View daily tasks on the calendar
+- Navigate between months using arrow buttons
+- Click "Today" button to jump to current month
+
+### Language Switching
+
+- Click the language toggle button to switch between Chinese and English
+- All UI elements are translated dynamically
+- Task names and descriptions remain unchanged
+
+### Daily Task Refresh
+
+- Daily tasks automatically refresh when the date changes
+- Manual refresh button available for immediate refresh
+- Auto-refresh can be toggled in settings
+
+## Keyboard Shortcuts
+
+- `Ctrl+N`: Create a new task
+- `Ctrl+F`: Focus the search box
+- `F5`: Refresh the task list
+- `Esc`: Clear selection
+
+## Project Structure
+
+```
+├── task_manager.py      # Main application
+├── requirements.txt     # Python dependencies
+├── build_exe.py        # Executable build script
+├── build.bat           # Windows batch build script
+└── dist/               # Build output (automatically generated)
 ```
 
-## 📁 项目结构
+## License
 
-```
-task/
-├── task_manager.py      # 主程序文件
-├── requirements.txt     # 依赖包列表
-├── build_exe.py        # 打包脚本
-├── build.bat           # Windows打包批处理文件
-├── README.md           # 项目说明文档
-├── task_data.json      # 数据文件（自动生成）
-└── dist/               # 打包输出目录（打包后生成）
-```
-
-## 🎯 使用说明
-
-### 添加任务
-1. 点击右上角"➕ 添加任务"按钮
-2. 填写任务名称（必填）
-3. 填写任务描述（可选）
-4. 选择任务级别（简单/普通/困难/史诗）
-5. 选择任务类型（一次性/日常/每周）
-6. 点击"保存"
-
-### 完成任务
-1. 在任务列表中点击要完成的任务
-2. 在右侧详情面板查看任务信息
-3. 点击"✅ 完成任务"按钮
-4. 获得相应级别的金币奖励
-
-### 编辑任务
-1. 选择要编辑的任务
-2. 点击"✏️ 编辑任务"按钮
-3. 修改任务信息
-4. 点击"保存"
-
-### 删除任务
-1. 选择要删除的任务
-2. 点击"🗑️ 删除任务"按钮
-3. 确认删除
-
-## 💡 功能说明
-
-### 日常任务
-- 每天可以完成一次
-- 完成后会在第二天重置，可以再次完成
-- 每次完成都会获得金币奖励
-
-### 每周任务
-- 每周可以完成一次
-- 完成后会在7天后重置，可以再次完成
-- 每次完成都会获得金币奖励
-
-### 数据存储
-- 所有数据保存在 `task_data.json` 文件中
-- 包括任务列表、总金币、金币历史记录
-- 应用关闭后数据自动保存
-
-## 🛠️ 技术栈
-
-- **Python 3.7+**
-- **tkinter**：GUI界面（Python内置）
-- **JSON**：数据存储
-- **PyInstaller**：打包为exe
-
-## 📝 注意事项
-
-1. **数据备份**：建议定期备份 `task_data.json` 文件
-2. **Python版本**：需要Python 3.7或更高版本
-3. **打包大小**：打包后的exe文件较大（约30-50MB），这是正常的，因为包含了Python解释器
-
-## 🔧 自定义配置
-
-### 修改任务级别和奖励
-编辑 `task_manager.py` 中的 `TaskLevel` 枚举类：
-
-```python
-class TaskLevel(Enum):
-    SIMPLE = ("简单", 1, 10)      # 名称, 级别, 金币奖励
-    NORMAL = ("普通", 2, 25)
-    HARD = ("困难", 3, 50)
-    EPIC = ("史诗", 4, 100)
-```
-
-### 修改颜色主题
-编辑 `TaskManagerApp.setup_ui()` 方法中的 `self.colors` 字典。
-
-## 📄 许可证
-
-本项目仅供学习和个人使用。
-
-## 🤝 贡献
-
-欢迎提出建议和反馈！
-
----
-
-**享受你的任务管理之旅！** 🎉
-
-
+Free for personal use and can be freely modified; commercial use is prohibited.
