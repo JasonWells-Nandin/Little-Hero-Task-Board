@@ -1,6 +1,6 @@
 # Task Adventure Manager
 
-  Have you played *The Legend of Zelda: Breath of the Wild*, *Tears of the Kingdom*, or *Stardew Valley*? This is a desktop task management application built with Python and Tkinter, designed for personal daily task management (to-do lists) and featuring gamified design. Complete tasks, earn coins, and improve your productivity.
+Have you played *The Legend of Zelda: Breath of the Wild*, *Tears of the Kingdom*, or *Stardew Valley*? This is a desktop task management application built with Python and Tkinter, designed for personal daily task management (to-do lists) and featuring gamified design. Complete tasks, earn coins, and improve your productivity.
 See the screenshots below:
 
 ![task](task.png)
@@ -116,3 +116,4 @@ The executable will be generated in the `dist` directory.
 ## License
 
 Free for personal use and can be freely modified; commercial use is prohibited.
+
